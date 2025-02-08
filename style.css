@@ -1,0 +1,125 @@
+/* all style*/
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* navigation bar */
+.navbar {
+    background: #2d2d2d;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background: maroon;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: maroon;
+    top: 60px;
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header {
+    text-align: center;
+    background:maroon;
+    color: white;
+    padding: 3rem 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+/* Fom */
+input, textarea, button {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: maroon;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: maroon;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2d2d2d;
+    color: white;
+}
