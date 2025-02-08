@@ -118,34 +118,29 @@ $(document).ready(function() {
         });
     });
 
-    // Form submission
-    $('#registrationForm').on('submit', function(e) {
-        e.preventDefault();
-        
-        if (validateForm()) {
-            const formData = new FormData(this);
-            
+    $(document).ready(function() {
+        $('#registrationForm').on('submit', function(e) {
+            e.preventDefault();
+
             $.ajax({
-                url: 'api/register.php',
-                method: 'POST',
-                data: formData,
-                processData: false,
-                contentType: false,
+                type: 'POST',
+                url: 'register.php',
+                data: $(this).serialize(),
+                dataType: 'json',
                 success: function(response) {
-                    if(response.status === 'success') {
+                    if (response.status === 'success') {
                         alert('Registration successful!');
-                        // Force redirect to login page
-                        window.location.replace('home.html');
+                        window.location.href = 'home.html';
+                    } else {
+                        alert(response.message);
                     }
                 },
                 error: function(xhr, status, error) {
-                    console.log('Error:', error);
                     alert('Registration failed: ' + error);
                 }
             });
-        }
-    });
-    
+        });
+    });    
 
     function validateForm() {
         let isValid = true;
