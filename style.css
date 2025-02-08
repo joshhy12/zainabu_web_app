@@ -79,18 +79,47 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+  .header {
+      background-color: #800000;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+  }
 
-.header {
-    text-align: center;
-    background:maroon;
-    color: white;
-    padding: 3rem 0;
-}
+  .header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
 
-.header h1 {
-    font-size: 2.5rem;
-}
+  .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
 
+  .header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+  }
+
+  .header .register-btn {
+      display: inline-block;
+      padding: 15px 40px;
+      background-color: white;
+      border: 2px solid white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+  }
+
+  .header .register-btn:hover {
+      background-color: transparent;
+      color: rgb(74, 9, 9);
+  }
 section {
     padding: 2rem 0;
 }
@@ -113,7 +142,7 @@ button {
 }
 
 button:hover {
-    background: maroon;
+    background: rgb(231, 222, 222);
 }
 
 /* Footer */
@@ -201,7 +230,7 @@ button:hover {
 
 /* Submit Button */
 .submit-btn {
-    background-color: #007bff;
+    background-color: #800000;
     color: white;
     padding: 12px 24px;
     border: none;
@@ -215,7 +244,7 @@ button:hover {
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+    background-color: #490101;
 }
 
 /* Responsive Design */
@@ -426,4 +455,149 @@ input:focus::placeholder {
         text-align: center;
         gap: 10px;
     }
+}
+  .slider-main {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      position: relative;
+      height: 100vh;
+  }
+
+  .slider-container {
+
+
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .slider {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+      min-width: 100%;
+      height: 100%;
+  }
+
+  .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
+  }
+
+  .slider-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+  }
+
+  .prev {
+      left: 10px;
+  }
+
+  .next {
+      right: 10px;
+  }
+
+  .slider-dots {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 10;
+  }
+
+  .dot {
+      width: 12px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      cursor: pointer;
+  }
+
+  .dot.active {
+      background: #ffffff;
+  }
+
+  /* Registration Button Styling */
+  .register-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      padding: 15px 30px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
+  }
+
+  .register-btn:hover {
+      background: #0056b3;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .slider {
+          height: 300px;
+      }
+    
+      .slider-container {
+          max-width: 100%;
+          border-radius: 0;
+      }
+  }
+
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
 }
