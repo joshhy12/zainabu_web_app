@@ -1,6 +1,10 @@
 <?php
 require_once './config/database.php';
-error_reporting(0);
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+// Rest of your registration logic
+
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
