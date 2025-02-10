@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAA Announcement System</title>
-    <link rel="icon" href="img/iaa_logo.jpg">
+    <title>Registration - IAA Announcement System</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="img/iaa_logo.jpg" alt="IAA Logo" class="logo-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon">
+                    <path d="M22 9.5V8a2 2 0 0 0-2-2h-6.5"></path>
+                    <path d="M6 17h8"></path>
+                    <path d="M6 13h8"></path>
+                    <path d="M18 2h-1"></path>
+                    <path d="M2 6v14c0 1 1 2 2 2h16c1 0 2-1 2-2V6c0-1-1-2-2-2H4c-1 0-2 1-2 2Z"></path>
+                </svg>
                 <a href="index.html">IAA Announcement System</a>
             </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About Us</a></li>
                 <li><a href="registration.html">Register</a></li>
-                <li><a href="#announcements">Announcements</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html#announcements">Announcements</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about">About Us</a>
+                        <a href="index.html#info">Information</a>
+                        <a href="index.html#contact">Contact Us</a>
+                    </div>
+                </li>
             </ul>
-           
         </div>
     </nav>
-
-    <br><br><br><br>
 
     <main>
         <div class="registration-container">
@@ -84,41 +91,27 @@
                     <input type="password" id="confirmPassword" name="confirm_password" required>
                     <span class="error-message" id="confirmPasswordError"></span>
                 </div>
-
+                <div class="form-group">
+                    <span class="error-message" id="submitError"></span>
+                </div>
                 <button type="submit" class="submit-btn">Register</button>
             </form>
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: info@iaa.ac.tz</p>
-                <p>Phone: +255 123 456 789</p>
-                <p>Address: Arusha, Tanzania</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="#about">About Us</a>
-                <a href="#announcements">Announcements</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">LinkedIn</a>
-                </div>
-            </div>
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h3>Registration Successful!</h3>
+            <p>Welcome to IAA Announcement System</p>
+            <button class="modal-btn" onclick="redirectToHome()">Continue to Home</button>
         </div>
-        <div class="footer-bottom">
-            <p>© 2025 IAA Announcement System. All rights reserved.</p>
-        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 IAA Announcement System. All Rights Reserved.</p>
     </footer>
 
-    <script src="app.js"></script>
-    <script src="registration.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

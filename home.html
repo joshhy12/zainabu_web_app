@@ -3,132 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAA Dashboard | Welcome</title>
-    <link rel="icon" href="img/iaa_logo.jpg">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Welcome - Home</title>
+    <style>
+        .welcome-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .logout-btn {
+            background-color: #ff4444;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .logout-btn:hover {
+            background-color: #cc0000;
+        }
+        .user-name {
+            color: #2196F3;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="img/iaa_logo.jpg" alt="IAA Logo" class="logo-img">
-                <a href="home.html">IAA Announcement System</a>
-            </div>
-            <div class="user-nav">
-                <span class="welcome-text">Welcome, <span id="userName"></span></span>
-                <div class="nav-links">
-                    <a href="#dashboard" class="active">Dashboard</a>
-                    <a href="#announcements">Announcements</a>
-                    <a href="#profile">My Profile</a>
-                    <a href="index.html" class="logout-btn">Logout</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div class="welcome-container">
+        <h1>Welcome, <span id="userName" class="user-name"></span>!</h1>
+        <p>You have successfully logged into your account.</p>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
 
-    <main class="dashboard-main">
-        <div class="dashboard-container">
-            <div class="dashboard-header">
-                <h1>Student Dashboard</h1>
-                <p class="current-date" id="currentDate"></p>
-            </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get user name from session storage
+            const userName = sessionStorage.getItem('newUser');
+            if (userName) {
+                document.getElementById('userName').textContent = userName;
+            } else {
+                // Redirect to login if no user is found
+                window.location.href = 'index.html';
+            }
+        });
 
-            <div class="dashboard-grid">
-                <div class="dashboard-card announcements-card">
-                    <h2>Latest Announcements</h2>
-                    <div class="announcement-list">
-                        <div class="announcement">
-                            <h3>Exam Schedule Released</h3>
-                            <p>Final examination timetable for this semester is now available.</p>
-                            <span class="date">2 hours ago</span>
-                        </div>
-                        <div class="announcement">
-                            <h3>Library Hours Extended</h3>
-                            <p>Library will remain open until 10 PM during exam week.</p>
-                            <span class="date">1 day ago</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dashboard-card quick-links">
-                    <h2>Quick Links</h2>
-                    <div class="links-grid">
-                        <a href="#" class="quick-link">
-                            <i class="icon calendar-icon"></i>
-                            <span>Academic Calendar</span>
-                        </a>
-                        <a href="#" class="quick-link">
-                            <i class="icon courses-icon"></i>
-                            <span>My Courses</span>
-                        </a>
-                        <a href="#" class="quick-link">
-                            <i class="icon results-icon"></i>
-                            <span>Exam Results</span>
-                        </a>
-                        <a href="#" class="quick-link">
-                            <i class="icon library-icon"></i>
-                            <span>Library</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="dashboard-card upcoming-events">
-                    <h2>Upcoming Events</h2>
-                    <div class="events-list">
-                        <div class="event">
-                            <div class="event-date">
-                                <span class="day">15</span>
-                                <span class="month">Dec</span>
-                            </div>
-                            <div class="event-details">
-                                <h4>End of Semester Meeting</h4>
-                                <p>Main Hall - 10:00 AM</p>
-                            </div>
-                        </div>
-                        <div class="event">
-                            <div class="event-date">
-                                <span class="day">20</span>
-                                <span class="month">Dec</span>
-                            </div>
-                            <div class="event-details">
-                                <h4>Final Exams Begin</h4>
-                                <p>All Departments</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Support</h3>
-                <p>Email: support@iaa.ac.tz</p>
-                <p>Phone: +255 123 456 789</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Access</h3>
-                <a href="#">Student Portal</a>
-                <a href="#">Academic Calendar</a>
-                <a href="#">Help Center</a>
-            </div>
-            <div class="footer-section">
-                <h3>Follow IAA</h3>
-                <div class="social-links">
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 IAA Announcement System. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="dashboard.js"></script>
+        function logout() {
+            // Clear session storage
+            sessionStorage.clear();
+            // Redirect to login page
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 </html>

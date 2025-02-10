@@ -1,166 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IAA Announcement System</title>
-    <link rel="icon" href="img/iaa_logo.jpg" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-      <div class="container">
-        <div class="logo">
-          <img src="img/iaa_logo.jpg" alt="IAA Logo" class="logo-img" />
-          <a href="#">IAA Announcement System</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="registration.html">Register</a></li>
-          <li><a href="#announcements">Announcements</a></li>
-
-          <li class="dropdown">
-            <a href="#" class="dropbtn">More</a>
-            <div class="dropdown-content">
-              <a href="#about">About Us</a>
-              <a href="#info">Information</a>
-              <a href="#contact">Contact Us</a>
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon">
+                    <path d="M22 9.5V8a2 2 0 0 0-2-2h-6.5"></path>
+                    <path d="M6 17h8"></path>
+                    <path d="M6 13h8"></path>
+                    <path d="M18 2h-1"></path>
+                    <path d="M2 6v14c0 1 1 2 2 2h16c1 0 2-1 2-2V6c0-1-1-2-2-2H4c-1 0-2 1-2 2Z"></path>
+                </svg>
+                <a href="#">IAA Announcement System</a>
             </div>
-          </li>
-        </ul>
-      </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="#about">About Us</a>
+                        <a href="#info">Information</a>
+                        <a href="#contact">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Header  -->
-    <header class="header" id="home">
-      <div class="container">
-        <h1>Welcome to the IAA Announcement System</h1>
-        <a href="registration.html" class="register-btn" style="color: #800000;">Register Now</a>
-      </div>    </header>
-
-  
-  
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=1200" alt="Slide 1">
+                <div class="slide-content">
+                    <h1>Welcome to IAA Announcement System</h1>
+                    <p>Stay informed and connected</p>
+                    <a href="registration.html" class="cta-button">Register Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1200" alt="Slide 2">
+                <div class="slide-content">
+                    <h1>Latest Updates</h1>
+                    <p>Get real-time notifications</p>
+                    <a href="registration.html" class="cta-button">Join Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=1200" alt="Slide 3">
+                <div class="slide-content">
+                    <h1>Stay Connected</h1>
+                    <p>Never miss important announcements</p>
+                    <a href="registration.html" class="cta-button">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev">❮</button>
+        <button class="slider-btn next">❯</button>
+        <div class="dots"></div>
+    </div>
 
     <main>
-      <!-- Announcement -->
-      <section class="announcement-section" id="announcements">
-        <div class="container">
-          <h2>Latest Announcements</h2>
-          <ul class="announcement-list">
-            <li class="announcement">
-              <h3>Exam Schedule Released</h3>
-              <p>
-                The schedule for the final exams has been uploaded. Please check
-                the department portal.
-              </p>
-              <span class="date">Posted on: January 25, 2025</span>
-            </li>
-            <li class="announcement">
-              <h3>New Course Materials Available</h3>
-              <p>
-                Updated course materials for the semester are now available for
-                download.
-              </p>
-              <span class="date">Posted on: January 20, 2025</span>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <!-- Announcements Section -->
+        <section id="announcements" class="section">
+            <div class="container">
+                <h2>Latest Announcements</h2>
+                <div class="announcement-list">
+                    <div class="announcement">
+                        <h3>Exam Schedule Released</h3>
+                        <p>The schedule for the final exams has been uploaded. Please check the department portal.</p>
+                        <span class="date">Posted on: January 25, 2025</span>
+                    </div>
+                    <div class="announcement">
+                        <h3>New Course Materials Available</h3>
+                        <p>Updated course materials for the semester are now available for download.</p>
+                        <span class="date">Posted on: January 20, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- Add Announcement Part -->
-      <section class="add-announcement">
-        <div class="container">
-          <h2>Post an Announcement</h2>
-          <form class="announcement-form">
-            <label for="title">Title:</label>
-            <input
-              type="text"
-              id="title"
-              name="title"
-              placeholder="Enter announcement title"
-              required
-            />
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>The IAA Announcement System is dedicated to keeping students informed about latest news, updates concerning departments and different events.</p>
+            </div>
+        </section>
 
-            <label for="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="Write your announcement here..."
-              required
-            ></textarea>
+        <!-- Info Section -->
+        <section id="info" class="section">
+            <div class="container">
+                <h2>Information</h2>
+                <p>This system ensures that everyone stays connected and informed. Regularly check for new updates and announcements.</p>
+            </div>
+        </section>
 
-            <button type="submit">Post Announcement</button>
-          </form>
-        </div>
-      </section>
-
-      <!-- About Part -->
-      <section class="about-section" id="about">
-        <div class="container">
-          <h2>About Us</h2>
-          <p>
-            The IAA Announcement System is dedicated to keep students informed
-            about latest news,any updates concerning departments and different
-            events.
-          </p>
-        </div>
-      </section>
-
-      <!-- Info Part -->
-      <section class="info-section" id="info">
-        <div class="container">
-          <h2>Information</h2>
-          <p>
-            This system ensures that everyone stays connected and informed.
-            Regulary check for new updates and announcements.
-          </p>
-        </div>
-      </section>
-
-      <!-- Contact Part -->
-      <section class="contact-section" id="contact">
-        <div class="container">
-          <h2>Contact Us</h2>
-          <form class="contact-form">
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
-
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-
-            <label for="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="Your Message"
-              required
-            ></textarea>
-
-            <button type="submit">Send</button>
-          </form>
-        </div>
-      </section>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer">
-      <p>© 2025 IAA Announcement System. All Rights Reserved.</p>
+    <footer>
+        <p>© 2025 IAA Announcement System. All Rights Reserved.</p>
     </footer>
-  </body>
-</html>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
